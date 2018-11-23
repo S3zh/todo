@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>todo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Todo</h2>
+    <div>
+        <input type="text" data-bind="value: inputTodo">
+        <button data-bind="click: createTodo"> Add ToDo</button>
+    </div>
+    <div data-bind="foreach: todos">
+        <div>
+            <todo params="name: name"></todo>
+            <button data-bind="click: $root.removeTodo">Remove</button>
+        </div>
+    </div>
+
+</body>
+<script type='text/javascript' src='knockout-3.4.2.js'></script>
+<script src="todo.js"></script>
+</html>
